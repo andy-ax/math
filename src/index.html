@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>frame</title>
+	<script type="text/javascript" src="./math.js"></script>
+</head>
+<body>
+    <input type="text" id="input"  />
+    <button id="button">计算</button>
+    <p id="output"></p>
+    <script>
+        var button = document.getElementById('button');
+        var input = document.getElementById('input');
+        var output = document.getElementById('output');
+        button.addEventListener('click',function () {
+            try {
+                output.innerHTML = math.math(input.value);
+            } catch (e) {
+                output.innerHTML = '错误的表达式'
+            }
+
+        });
+    </script>
+</body>
+</html>
